@@ -1,13 +1,6 @@
 """
-menu.py
-
 Ties together primary storage (BSTNoteStorage, wrapping your
 teammate's real BST), the tag hash table, and the undo stack.
-
-CHANGED FOR INTEGRATION: everything is now keyed by TITLE instead of
-a numeric id (engine.Note has no id field), and multi-tag input from
-the user is packed into/unpacked from engine.Note's single `tag`
-string field via pack_tags()/parse_tags().
 """
 
 from typing import List, Optional

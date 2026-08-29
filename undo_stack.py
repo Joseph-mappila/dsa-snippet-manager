@@ -1,32 +1,11 @@
-"""
-undo_stack.py
 
-Implements a LIFO Stack used exclusively for the "Undo Last Delete"
-feature. Works with your teammate's engine.Note unchanged - the stack
-never cared about a note's internal fields, only that it can hold a
-whole object and hand it back later.
-
-Data ownership decision:
-    The stack stores the COMPLETE Note object that was deleted. A
-    deleted note is removed entirely from the BST, so the Stack is
-    the only place left that remembers it. A note popped off the
-    stack is immediately reinserted into storage and never left
-    sitting in two places at once, so there's no risk of stale
-    duplicate copies.
-"""
 
 from typing import List, Optional
 from engine import Note
 
 
 class UndoStack:
-    """A simple LIFO stack of deleted Notes.
-
-    Built on a Python list: list.append() / list.pop() are both O(1)
-    amortized, which is exactly stack behavior. A manual linked-list
-    stack wasn't used since the Linked List data structure is already
-    separately demonstrated in engine.py.
-    """
+    
 
     def __init__(self) -> None:
         self._items: List[Note] = []

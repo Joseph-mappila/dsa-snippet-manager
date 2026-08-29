@@ -1,14 +1,5 @@
 """
-main.py
-
 Entry point for the Developer Snippet & Notes Manager.
-
-Run with:
-    python main.py
-
-engine.py must contain your teammate's Note / LinkedList /
-BinarySearchTree classes (real file from his branch, not the copy
-included here for testing).
 """
 
 from note_storage import BSTNoteStorage
